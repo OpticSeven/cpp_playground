@@ -2,10 +2,18 @@ cmake_minimum_required( VERSION 3.1)
 
 project(asyncN)
 
-add_executable(asyncN main.cpp)
+
+add_executable(asyncN ${PROJECT_SOURCE_DIR}/src/main.cpp)
+
+
+if(NOT CMAKE_DEBUG_POSTFIX)
+  set(CMAKE_DEBUG_POSTFIX d)
+endif()
+
 
 set_target_properties(asyncN PROPERTIES
    CXX_STANDARD 11
    CXX_STANDARD_REQUIRED ON
    CXX_EXTENSIONS OFF
 )
+
