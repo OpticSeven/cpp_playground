@@ -4,7 +4,8 @@ project(asyncN)
 
 find_package (Threads)
 
-add_executable(asyncN ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_executable(asyncN ${PROJECT_SOURCE_DIR}/src/main.cpp 
+  ${PROJECT_SOURCE_DIR}/src/async.cpp)
 
 if(NOT CMAKE_DEBUG_POSTFIX)
   set(CMAKE_DEBUG_POSTFIX d)
